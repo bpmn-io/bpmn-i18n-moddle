@@ -12,7 +12,13 @@ import BpmnI18nSchema from 'bpmn-i18n-moddle/resources/bpmn-i18n.json';
 
 const moddle = new BpmnModdle({ i18n: BpmnI18nSchema });
 
-// import XML with i18n namespace
+const translation = moddle.create('i18n:Translation', { 'xml:lang': 'de', body: 'Startereignis' });
+
+const extensionElements = moddle.create('bpmn:ExtensionElements', {
+  values: [ translation ]
+});
+
+console.log(extensionElements.get('values'));
 ```
 
 ## Resources
