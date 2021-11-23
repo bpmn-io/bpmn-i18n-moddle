@@ -1,4 +1,3 @@
-
 import expect from '../expect';
 
 import { createModdle } from '../helper';
@@ -46,5 +45,11 @@ describe('read', function() {
 });
 
 function getTranslations(element) {
-  return element.get('extensionElements').get('translations');
+  const extensions = element.get('extensionElements').get('values');
+
+  return extensions.filter(isTranslation);
+}
+
+function isTranslation(element) {
+  return element.$instanceOf('i18n:Translation');
 }

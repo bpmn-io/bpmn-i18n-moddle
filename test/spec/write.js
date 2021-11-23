@@ -29,7 +29,7 @@ describe('write', function() {
         moddle.create('i18n:Translation', { 'xml:lang': 'de', body: 'ja', target: '@isInterrupting' }),
         moddle.create('i18n:Translation', { 'xml:lang': 'de', body: 'Ein Startereignis.', target: 'documentation' })
       ];
-      const extensionElements = moddle.create('bpmn:ExtensionElements', { translations });
+      const extensionElements = moddle.create('bpmn:ExtensionElements', { values: translations });
 
       const expectedXML =
         '<bpmn:extensionElements xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" ' +
