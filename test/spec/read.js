@@ -1,10 +1,9 @@
-const { find } = require('min-dash');
 
-const expect = require('../expect');
+import expect from '../expect';
 
-const { createModdle } = require('../helper');
+import { createModdle } from '../helper';
 
-const { fromFile } = require('../xml-helper');
+import { fromFile } from '../xml-helper';
 
 
 describe('read', function() {
@@ -36,7 +35,6 @@ describe('read', function() {
     const { rootElement: definitions } = await fromFile(moddle, 'test/fixtures/bpmn/simple.bpmn');
     const startEvent = definitions.rootElements[0].flowElements[0];
 
-    debugger;
     // when
     const translations = getTranslations(startEvent);
 

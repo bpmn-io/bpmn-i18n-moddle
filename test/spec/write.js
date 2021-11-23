@@ -1,8 +1,8 @@
-const { assign } = require('min-dash');
+import { assign } from 'min-dash';
 
-const expect = require('../expect');
+import expect from '../expect';
 
-const { createModdle } = require('../helper');
+import { createModdle } from '../helper';
 
 
 describe('write', function() {

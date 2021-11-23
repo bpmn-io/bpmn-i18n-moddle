@@ -1,10 +1,10 @@
-const { createModdle } = require('../helper');
+import { createModdle } from '../helper';
 
-const {
+import {
   fromFile,
   toXML,
   validate
-} = require('../xml-helper');
+} from '../xml-helper';
 
 
 // TODO(@barmac): enable when XSD validation is figured out
