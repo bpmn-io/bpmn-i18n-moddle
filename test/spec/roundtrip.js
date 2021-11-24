@@ -1,4 +1,4 @@
-import { createModdle } from '../helper';
+import { createModdle, readFile } from '../helper';
 
 import {
   fromFile,
@@ -7,8 +7,7 @@ import {
 } from '../xml-helper';
 
 
-// TODO(@barmac): enable when XSD validation is figured out
-describe.skip('roundtrip', function() {
+describe('roundtrip', function() {
 
   this.timeout(10000);
 
@@ -16,6 +15,9 @@ describe.skip('roundtrip', function() {
 
   function test(file) {
     return async function() {
+
+      // assume
+      await validate(readFile(file));
 
       // given
       const { rootElement: definitions } = await fromFile(moddle, file);
