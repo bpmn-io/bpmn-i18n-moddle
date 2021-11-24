@@ -2,12 +2,12 @@
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:i18n="http://www.omg.org/spec/BPMN/non-normative/extensions/i18n/1.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1xsinej" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.8.0-rc.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.15.0" xml:lang="en">
   <bpmn:process id="Process_0dp8lmr" isExecutable="true">
     <bpmn:startEvent id="StartEvent_1">
+      <bpmn:documentation>A start event.</bpmn:documentation>
       <bpmn:extensionElements>
         <i18n:translation xml:lang="de">Startereignis</i18n:translation>
         <i18n:translation target="@isInterrupting" xml:lang="de">ja</i18n:translation>
         <i18n:translation target="documentation" xml:lang="de">Ein Startereignis.</i18n:translation>
       </bpmn:extensionElements>
-      <bpmn:documentation>A start event.</bpmn:documentation>
       <bpmn:outgoing>Flow_1lpbdia</bpmn:outgoing>
     </bpmn:startEvent>
     <bpmn:task id="Activity_0eb4n4l">
